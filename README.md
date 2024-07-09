@@ -1,7 +1,5 @@
 # AI Chatbot
 
----
-
 This repository contains an AI chatbot application built with Node.js, Express, React, and integrated with the llama3 model from ollama. The chatbot allows users to interact with an AI assistant in real-time through a web interface.
 
 ## Features
