@@ -64,10 +64,6 @@ Any contributions you make are **greatly appreciated**.
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
 ## Contact
 
 Fahmid Chowdhury - [GitHub](https://github.com/Fahmid-Chowdhury)
