@@ -38,8 +38,8 @@ To get a local copy up and running, follow these steps:
    ```
 
 ## Usage
-
-1. **Start the backend server**
+1. **Download llama3 Model**: Download the llama3 model from the [ollama model library](https://ollama.com/library).
+2. **Start the backend server**
    ```bash
    nodemon
    ```
