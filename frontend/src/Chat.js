@@ -80,7 +80,7 @@ const Chat = () => {
 
     try {
       const response = await axios.post('http://localhost:5000/api/chat', {
-        model: 'WheelZOnRent',
+        model: 'llama3',
         messages: [...messages, userMessage],
       });
 

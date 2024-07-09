@@ -37,7 +37,7 @@ app.post('/api/chat', async (req, res) => {
     try {
         // Send user message to llama3 model via axios
         const response = await axios.post('http://localhost:11434/api/generate', {
-            model: 'WheelZOnRent',
+            model: 'llama3',
             prompt: userMessage,
             stream: false,
         });
@@ -53,7 +53,7 @@ app.post('/api/chat', async (req, res) => {
             id: 'chatcmpl-123',
             object: 'chat.completion',
             created: Date.now(),
-            model: 'WheelZOnRent',
+            model: 'llama3',
             choices: [
                 {
                     message: {
