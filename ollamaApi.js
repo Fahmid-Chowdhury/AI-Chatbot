@@ -16,11 +16,10 @@ app.post('/api/reset', (req, res) => {
   res.json({ message: 'Conversation history reset.' });
 });
 
-let conversationHistory = [];
 
 app.post('/api/chat', async (req, res) => {
     const { model, messages, options, stream, keep_alive } = req.body;
-
+    let conversationHistory = [];
     // Validate request body
     if (!model || !messages || !Array.isArray(messages)) {
         return res.status(400).json({ error: 'Model and messages are required fields' });

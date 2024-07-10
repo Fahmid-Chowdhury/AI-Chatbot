@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import * as marked from 'marked'; // Import all exports from marked
@@ -65,6 +65,19 @@ const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const resetConversation = async () => {
+      try {
+        await axios.post('http://localhost:5000/api/reset');
+        setMessages([]);
+      } catch (error) {
+        console.error('Error resetting conversation history:', error.message);
+      }
+    };
+
+    resetConversation();
+  }, []);
 
   const displayMessage = (role, content) => {
     setMessages((prevMessages) => [...prevMessages, { role, content }]);
