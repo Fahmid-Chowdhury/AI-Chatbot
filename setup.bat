@@ -94,7 +94,7 @@ if %ERRORLEVEL% EQU 2 (
 ) else (
     if %ERRORLEVEL% EQU 1 (
         echo Starting AIChatbot...
-        call AIChatbot.bat
+        call start.bat
     ) else (
         echo Invalid choice. Exiting setup.
         exit /b 1
