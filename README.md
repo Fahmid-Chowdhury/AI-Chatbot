@@ -24,31 +24,29 @@ This repository contains an AI chatbot application built with Node.js, Express, 
 
 To get a local copy up and running, follow these steps:
 
-1. **Install ollama**: Follow the installation instructions on the [ollama website](https://ollama.com).
-2. **Clone the repository**
+1. **Clone the repository**
    ```bash
    git clone https://github.com/Fahmid-Chowdhury/AI-Chatbot.git
-   ```
-3. **Install dependencies**
-   ```bash
    cd AI-Chatbot
-   npm install
-   cd frontend
-   npm install
    ```
 
+2. **Setup the Application**
+   - For the first time setup, run `setup.bat` to install dependencies, including Node.js, ollama, and the llama3 model. This script will guide you through the initial setup process.
+     ```bash
+     setup.bat
+     ```
+
+3. **Starting the Application**
+   - After the initial setup, you can start the application using `start.bat` to run the backend and frontend servers.
+     ```bash
+     start.bat
+     ```
+
 ## Usage
-1. **Download llama3 Model**: Download the llama3 model from the [ollama model library](https://ollama.com/library).
-2. **Start the backend server**
-   ```bash
-   nodemon
-   ```
-3. **Start the frontend**
-   ```bash
-   cd fronten
-   npm start
-   ```
-4. Open your browser and navigate to `[http://localhost:5000]` to access the chatbot application.
+
+Once the setup is completed and the application is running, follow these steps to use the AI chatbot:
+
+- Interact with the chatbot interface in your web browser. Send messages and receive responses powered by the llama3 model integrated with Node.js and React.
 
 ## Customizing Models
 
