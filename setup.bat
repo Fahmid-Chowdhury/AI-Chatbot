@@ -53,15 +53,27 @@ if %ERRORLEVEL% NEQ 0 (
     echo Ollama is already installed.
 )
 
+:: Function to install LLM (llama3 by default) model from Ollama
+:install_llm_model
+echo Installing LLM model...
+:: Download the LLM model from Ollama
+ollama pull llama3
+if %ERRORLEVEL% NEQ 0 (
+    echo Error installing LLM model.
+    exit /b 1
+)
+
 :: Function to install npm packages
 :install_npm_packages
 echo Installing npm packages...
+set "currentDir=%~dp0"
+cd /d "%currentDir%"
 npm install
 if %ERRORLEVEL% NEQ 0 (
     echo Error installing npm packages in root directory.
     exit /b 1
 )
-cd frontend
+cd /d "%currentDir%frontend"
 npm install
 if %ERRORLEVEL% NEQ 0 (
     echo Error installing npm packages in frontend directory.
