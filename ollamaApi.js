@@ -16,7 +16,6 @@ app.post('/api/reset', (req, res) => {
   res.json({ message: 'Conversation history reset.' });
 });
 
-
 app.post('/api/chat', async (req, res) => {
     const { model, messages, options, stream, keep_alive } = req.body;
     let conversationHistory = [];

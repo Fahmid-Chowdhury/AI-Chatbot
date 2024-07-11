@@ -1,6 +1,10 @@
 @echo off
 setlocal
 
+echo Starting all services...
+
+pause
+
 :: Function to start the backend server
 :start_server
 echo Starting backend server...
@@ -12,6 +16,10 @@ if %ERRORLEVEL% NEQ 0 (
 )
 echo Backend server started.
 
+:: Function to start Ollama
+:start_ollama
+start "" "C:\Users\User\AppData\Local\Programs\Ollama\ollama app.exe"
+echo Ollama started.
 
 :: Function to start the frontend server
 :start_frontend
@@ -23,19 +31,8 @@ if %ERRORLEVEL% NEQ 0 (
     exit /b 1
 )
 echo Frontend server started.
-goto:eof
 
 :: Main script
 echo Starting all services...
-
-:: Start Ollama with llama3 model
-call :start_ollama
-
-:: Start backend server
-call :start_server
-
-:: Start frontend server
-call :start_frontend
-
 echo All services started successfully.
 pause
