@@ -30,12 +30,12 @@ app.post('/api/chat', async (req, res) => {
 
     // Prepare user message from conversation history
     const userMessage = conversationHistory.map(msg => `${msg.role}: ${msg.content}`).join('\n');
-    console.log('User message:', userMessage);
+    // console.log('User message:', userMessage);
 
     try {
         // Send user message to llama3 model via axios
         const response = await axios.post('http://localhost:11434/api/generate', {
-            model: 'llama3',
+            model: 'WheelZOnRent',
             prompt: userMessage,
             stream: false,
         });
@@ -51,7 +51,7 @@ app.post('/api/chat', async (req, res) => {
             id: 'chatcmpl-123',
             object: 'chat.completion',
             created: Date.now(),
-            model: 'llama3',
+            model: 'WheelZOnRent',
             choices: [
                 {
                     message: {

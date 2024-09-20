@@ -74,6 +74,8 @@ if %ERRORLEVEL% NEQ 0 (
     exit /b 1
 )
 cd /d "%currentDir%frontend"
+echo "%currentDir%frontend"
+pause
 npm install
 if %ERRORLEVEL% NEQ 0 (
     echo Error installing npm packages in frontend directory.

@@ -8,7 +8,7 @@ const ChatContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 80vh;
-  width: 400px;
+  width: 1000px;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
